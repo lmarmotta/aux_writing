@@ -2,3 +2,7 @@
 *.swp
 *.toc
 *.log
+*.bbl
+*.aux
+*.blg
+tese.out

@@ -1,0 +1,166 @@
+\documentclass[12pt,twoside,a4paper]{article}
+
+% -----------------------------------------------------------------------------
+%                           PACAKGE SELECTION
+% -----------------------------------------------------------------------------
+
+% Default packages for latex to work in portuguese.
+\usepackage[utf8]{inputenc}      % Dont know.
+\usepackage{indentfirst}         % Paragraphs.
+\usepackage[brazilian]{babel}    % Portuguese language only.
+\usepackage{lingmacros}          % Other languages.
+
+% Graphics packages.
+\usepackage{float}               % Pictures, obey me !
+
+% Bibliography.
+\usepackage{hyperref}            % Link references.
+
+% Margins and geometry.
+\usepackage{geometry}
+\geometry{a4paper,left=30mm,right=30mm,bottom=30mm,top=30mm}
+
+% Math and code writing stuff.
+\usepackage{amsmath}
+\usepackage{listings}
+
+% Images.
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+
+% -----------------------------------------------------------------------------
+%                           HERE STARTS THE PARTY
+% -----------------------------------------------------------------------------
+
+\numberwithin{equation}{section}
+
+\title{
+    {\vspace{0mm} Minha universidade}\\
+    {\vspace{70mm} \textbf{O título do trabalho vai aquí}} \\
+}
+\author{Leonardo Motta Maia de Oliveira Carvalho}
+
+\date{\vfill São José dos Campos, 1 de Janeiro de 2017}
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\bibliographystyle{plain}
+
+\newpage
+\begin{abstract}
+    Aqui vai o abstract do trabalho.
+\end{abstract}
+
+\newpage
+
+\section{Uma seção só com coisas escritas}
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+\section{Uma seção com coisas escritas e equações}
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+\begin{equation}
+    A= B+C \frac{A}{B}
+\end{equation}
+
+
+\section{Uma seção com coisas escritas e imagens}
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+Aqui vai um paragrafo da seção Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã Aqui vai um paragrafo da seçã
+
+
+    % A single image.
+    \begin{figure}[htb]
+        \centering
+        \includegraphics[width=.7\linewidth]{image1.pdf}
+        \caption{The caption}
+        \label{Image}
+    \end{figure}
+
+Agora eu vou citar a figura \ref{Image}.
+
+    % Images side by side
+    \begin{figure}[H]
+
+    \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{image1.pdf}
+    \caption{a}
+    \label{fig:sfig1}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.9\linewidth]{image1.pdf}
+    \caption{b}
+    \label{fig:sfig2}
+    \end{subfigure}
+
+    \caption{Legenda para o conjunto de imagens}
+    \label{aloha}
+    \end{figure}
+
+    Aqui foi um exeplo de multiplas figuras. \ref{aloha}
+
+    \begin{figure}[H]
+
+        \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.9\linewidth]{image1.pdf}
+        \caption{a}
+        \label{fig:sfig1}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.9\linewidth]{image1.pdf}
+        \caption{b}
+        \label{fig:sfig2}
+        \end{subfigure}
+        \\
+        \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.9\linewidth]{image1.pdf}
+        \caption{c}
+        \label{fig:sfig1}
+        \end{subfigure}%
+        \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.9\linewidth]{image1.pdf}
+        \caption{d}
+        \label{fig:sfig2}
+        \end{subfigure}
+
+    \caption{Exemplo de quatro imagens juntas}
+    \label{quatro}
+    \end{figure}
+
+\section{Exemplo de seção com mais de duas subseções}
+Aalgo escrito aqui
+\subsection{Sub}
+Algo escrito aqui tbm.
+\subsubsection{subsub}
+Algo escrito aqui.
+
+\section{Uma seção com códigos}
+
+Códigos.
+
+\lstinputlisting[language=Gnuplot,frame=single,caption={Gnuplot code},breaklines=true,numbers=left,tabsize=4,basicstyle=\small,framexleftmargin=20pt]{plot.gnu}
+
+
+\section{Citando bibliografias}
+Vamos aqui citar o \cite{HIRSCH_VOL2}
+
+
+% This is the bib file call. Always in the end of the file please.
+\bibliography{refs.bib}
+
+\end{document}

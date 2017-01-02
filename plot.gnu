@@ -9,7 +9,7 @@ set term pdf monochrome size 15.0cm,9.0cm
 set encoding iso_8859_1
 
 # Name of the output file.
-set output "schemes.pdf"
+set output "image1.pdf"
 
 # I like grids.
 set grid
